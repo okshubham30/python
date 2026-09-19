@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Timetable</title>
+
+    <style>
+
+        /* Page Styling */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 20px;
+            color: #000000;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Table Styling */
+
+        table {
+            width: 900px;
+            max-width: 95%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            font-weight: bold;
+            background-color: #f2f2f2;
+        }
+
+        /* Button */
+
+        .button-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        button:hover {
+            background-color: #eeeeee;
+        }
+
+        /* Message */
+
+        #message {
+            text-align: center;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 700px) {
+
+            body {
+                margin: 10px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 12px;
+            }
+
+            th,
+            td {
+                padding: 6px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- Personal Timetable -->
+
+    <h1>My Personal Timetable</h1>
+
+    <table>
+
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+
+        <tr>
+            <td>8:00 - 9:00 AM</td>
+            <td>Maths</td>
+            <td>DSA</td>
+            <td>COA</td>
+            <td>Maths</td>
+            <td>DSA</td>
+            <td>Web Design</td>
+        </tr>
+
+        <tr>
+            <td>9:00 - 10:00 AM</td>
+            <td>COA</td>
+            <td>Web Design</td>
+            <td>DSA</td>
+            <td>COA</td>
+            <td>Web Design</td>
+            <td>JavaScript</td>
+        </tr>
+
+        <tr>
+            <td>10:00 - 11:00 AM</td>
+            <td>Web Design</td>
+            <td>Maths</td>
+            <td>JavaScript</td>
+            <td>DSA</td>
+            <td>COA</td>
+            <td>Revision</td>
+        </tr>
+
+        <tr>
+            <td>11:00 - 12:00 PM</td>
+            <td>C Programming</td>
+            <td>COA</td>
+            <td>Maths</td>
+            <td>JavaScript</td>
+            <td>C Programming</td>
+            <td>Practice</td>
+        </tr>
+
+    </table>
+
+
+    <!-- Weekly Revision Schedule -->
+
+    <h2>Weekly Revision Schedule</h2>
+
+    <table>
+
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+            <th>Revision Topic</th>
+            <th>Time</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>Maths</td>
+            <td>Important Formulas</td>
+            <td>6:00 - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>DSA</td>
+            <td>Arrays and Searching</td>
+            <td>6:00 - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>COA</td>
+            <td>Computer Organization Basics</td>
+            <td>6:00 - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>Web Design</td>
+            <td>HTML and CSS</td>
+            <td>6:00 - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>JavaScript</td>
+            <td>Variables, Functions and DOM</td>
+            <td>6:00 - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>C Programming</td>
+            <td>Loops, Arrays and Functions</td>
+            <td>6:00 - 7:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>All Subjects</td>
+            <td>Weekly Revision and Practice</td>
+            <td>10:00 - 12:00 AM</td>
+        </tr>
+
+    </table>
+
+
+    <!-- JavaScript -->
+
+    <div class="button-container">
+
+        <button onclick="showMessage()">
+            Show Schedule Message
+        </button>
+
+    </div>
+
+    <p id="message"></p>
+
+
+    <script>
+
+        function showMessage() {
+
+            document.getElementById("message").innerHTML =
+                "My timetable and weekly revision schedule are ready.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

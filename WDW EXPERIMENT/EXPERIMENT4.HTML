@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Marks</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Student Marks Table</h2>
+
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <th>MATHS</th>
+            <th>SCIENCE</th>
+            <th>ENGLISH</th>
+            <th>COMPUTER</th>
+            <th>SOCIAL</th>
+            <th>Total</th>
+            <th>Average</th>
+        </tr>
+
+
+        <tr>
+
+            <td>Shubham</td>
+
+            <td>85</td>
+            <td>78</td>
+            <td>90</td>
+            <td>88</td>
+            <td>82</td>
+
+            <td id="total1">-</td>
+
+            <td id="avg1">-</td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Rahul</td>
+
+            <td>75</td>
+            <td>80</td>
+            <td>85</td>
+            <td>90</td>
+            <td>78</td>
+
+            <td id="total2">-</td>
+
+            <td id="avg2">-</td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Aman</td>
+
+            <td>90</td>
+            <td>85</td>
+            <td>88</td>
+            <td>92</td>
+            <td>80</td>
+
+            <td id="total3">-</td>
+
+            <td id="avg3">-</td>
+
+        </tr>
+
+    </table>
+
+
+    <button onclick="calculateMarks()">
+        Calculate Total and Average
+    </button>
+
+
+    <script>
+
+        function calculateMarks() {
+
+            // Student 1
+            let total1 =
+                85 + 78 + 90 + 88 + 82;
+
+            let avg1 =
+                total1 / 5;
+
+            document.getElementById("total1").innerHTML = total1;
+
+            document.getElementById("avg1").innerHTML =
+                avg1.toFixed(2);
+
+
+            // Student 2
+            let total2 =
+                75 + 80 + 85 + 90 + 78;
+
+            let avg2 =
+                total2 / 5;
+
+            document.getElementById("total2").innerHTML = total2;
+
+            document.getElementById("avg2").innerHTML =
+                avg2.toFixed(2);
+
+
+            // Student 3
+            let total3 =
+                90 + 85 + 88 + 92 + 80;
+
+            let avg3 =
+                total3 / 5;
+
+            document.getElementById("total3").innerHTML = total3;
+
+            document.getElementById("avg3").innerHTML =
+                avg3.toFixed(2);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

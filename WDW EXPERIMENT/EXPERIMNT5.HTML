@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Shubham Maurya - Student ID Card</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: #222;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+
+        /* ================= ID CARD ================= */
+
+        .id-card {
+            width: 900px;
+            height: 520px;
+            margin: 30px auto;
+
+            background-color: white;
+
+            border-radius: 20px;
+            overflow: hidden;
+
+            border: 3px solid #ddd;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+
+        /* ================= TOP HEADER ================= */
+
+        .top-header {
+            height: 125px;
+
+            background-color: #e9785b;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 15px 25px;
+        }
+
+
+        /* ================= LOGO ================= */
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .logo-symbol {
+            width: 65px;
+            height: 65px;
+
+            background-color: white;
+            color: #d96d51;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .galgotias {
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        .college-name {
+            font-size: 11px;
+        }
+
+        .college-address {
+            text-align: right;
+
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* ================= CARD TITLE ================= */
+
+        .card-title {
+            height: 55px;
+
+            background-color: #eee51b;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 24px;
+            font-weight: bold;
+
+            color: black;
+        }
+
+
+        /* ================= STUDENT AREA ================= */
+
+        .student-area {
+            height: 250px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 18px 25px;
+
+            gap: 22px;
+        }
+
+
+        /* ================= STUDENT PHOTO ================= */
+
+        .student-photo {
+            width: 175px;
+            height: 175px;
+
+            object-fit: cover;
+
+            border: 2px solid #777;
+        }
+
+
+        /* ================= STUDENT DETAILS ================= */
+
+        .student-info {
+            flex: 1;
+            color: #111;
+        }
+
+        .student-info h1 {
+            font-size: 28px;
+
+            margin: 0 0 18px;
+
+            letter-spacing: 1px;
+        }
+
+        .student-info h3 {
+            font-size: 17px;
+
+            margin: 8px 0;
+        }
+
+        .student-info p {
+            font-size: 16px;
+
+            font-weight: bold;
+
+            margin: 10px 0;
+        }
+
+        .student-info h2 {
+            font-size: 27px;
+
+            margin-top: 15px;
+        }
+
+
+        /* ================= REGISTRAR ================= */
+
+        .registrar {
+            width: 110px;
+
+            text-align: center;
+
+            align-self: flex-end;
+
+            margin-bottom: 5px;
+        }
+
+        .signature {
+            font-family: cursive;
+
+            font-size: 24px;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* ================= BARCODE ================= */
+
+        .barcode {
+            height: 55px;
+
+            width: 75%;
+
+            margin: 0 auto;
+
+            background:
+                repeating-linear-gradient(
+                    90deg,
+                    black 0px,
+                    black 3px,
+                    white 3px,
+                    white 6px,
+                    black 6px,
+                    black 8px,
+                    white 8px,
+                    white 11px
+                );
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        .bottom-strip {
+            height: 35px;
+
+            background-color: #e9785b;
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+
+        /* ================= BACK SIDE ================= */
+
+        .back-header {
+            height: 75px;
+
+            background-color: #e9785b;
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+
+        .back-body {
+            height: 355px;
+
+            padding: 25px 35px;
+
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+
+        /* ================= DETAILS ================= */
+
+        .details {
+            width: 75%;
+        }
+
+        .row {
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            margin-bottom: 13px;
+
+            font-size: 17px;
+
+            line-height: 1.3;
+        }
+
+        .address-row {
+            margin-top: 8px;
+        }
+
+
+        /* ================= QR CODE ================= */
+
+        .qr-box {
+            width: 150px;
+            height: 150px;
+
+            margin-left: 20px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-box img {
+            width: 145px;
+            height: 145px;
+
+            object-fit: contain;
+        }
+
+
+        /* ================= RULES ================= */
+
+        .rules {
+            height: 90px;
+
+            background-color: #e9785b;
+            color: white;
+
+            padding: 8px 25px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            line-height: 1.25;
+        }
+
+        .rules p {
+            margin: 3px 0;
+        }
+
+
+        /* ================= PRINT BUTTON ================= */
+
+        .print-button {
+            display: block;
+
+            margin: 20px auto;
+
+            padding: 12px 25px;
+
+            background-color: #e9785b;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background-color: #d45f43;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 950px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .id-card {
+                width: 95%;
+                height: auto;
+            }
+
+            .top-header {
+                height: auto;
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+            .college-address {
+                text-align: center;
+            }
+
+            .student-area {
+                height: auto;
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 25px;
+            }
+
+            .registrar {
+                align-self: center;
+            }
+
+            .back-body {
+                height: auto;
+
+                flex-direction: column;
+            }
+
+            .details {
+                width: 100%;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+
+                gap: 5px;
+            }
+
+            .qr-box {
+                margin: 20px auto;
+            }
+
+            .rules {
+                height: auto;
+            }
+        }
+
+
+        /* ================= PRINT ================= */
+
+        @media print {
+
+            body {
+                background-color: white;
+            }
+
+            .print-button {
+                display: none;
+            }
+
+            .id-card {
+                box-shadow: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     FRONT SIDE
+================================================= -->
+
+<div class="id-card">
+
+
+    <!-- TOP HEADER -->
+
+    <div class="top-header">
+
+        <div class="logo-box">
+
+            <div class="logo-symbol">
+                G
+            </div>
+
+            <div>
+
+                <div class="galgotias">
+                    GALGOTIAS
+                </div>
+
+                <div class="college-name">
+                    COLLEGE OF ENGINEERING & TECHNOLOGY
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="college-address">
+
+            <b>
+                1, Knowledge Park-II,
+                Greater Noida - 201310
+            </b>
+
+            <br>
+
+            Contact No: 0120-4513800
+
+        </div>
+
+    </div>
+
+
+    <!-- TITLE -->
+
+    <div class="card-title">
+        STUDENT IDENTITY CARD
+    </div>
+
+
+    <!-- STUDENT INFORMATION -->
+
+    <div class="student-area">
+
+
+        <!-- YOUR PHOTO -->
+
+        <img
+            src="ASSET/SHUBHAM.png"
+            alt="Shubham Maurya"
+            class="student-photo"
+        >
+
+
+        <!-- STUDENT DETAILS -->
+
+        <div class="student-info">
+
+            <h1>
+                SHUBHAM MAURYA
+            </h1>
+
+            <h3>
+                B.Tech Computer Science and Engineering
+                2025 - 2029
+            </h3>
+
+            <p>
+                Galgotias College of Engineering & Technology
+            </p>
+
+            <h2>
+                25GCEBCS189
+            </h2>
+
+        </div>
+
+
+        <!-- REGISTRAR -->
+
+        <div class="registrar">
+
+            <div class="signature">
+                Signature
+            </div>
+
+            <b>
+                Registrar
+            </b>
+
+        </div>
+
+    </div>
+
+
+    <!-- BARCODE -->
+
+    <div class="barcode">
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="bottom-strip">
+
+        College Contact No: 0120-4513800
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     BACK SIDE
+================================================= -->
+
+<div class="id-card">
+
+
+    <!-- BACK HEADER -->
+
+    <div class="back-header">
+
+        GALGOTIAS COLLEGE OF ENGINEERING & TECHNOLOGY
+
+    </div>
+
+
+    <div class="back-body">
+
+
+        <!-- DETAILS -->
+
+        <div class="details">
+
+
+            <div class="row">
+
+                <b>
+                    Father Name:
+                </b>
+
+                <span>
+                    RAM AVATAR MAURYA
+                </span>
+
+            </div>
+
+
+            <div class="row">
+
+                <b>
+                    DOB:
+                </b>
+
+                <span>
+                    17/06/2007
+                </span>
+
+            </div>
+
+
+            <div class="row">
+
+                <b>
+                    Email:
+                </b>
+
+                <span>
+                    shubham32maurya@gmail.com
+                </span>
+
+            </div>
+
+
+            <div class="row">
+
+                <b>
+                    Contact:
+                </b>
+
+                <span>
+                    7080469474
+                </span>
+
+            </div>
+
+
+            <div class="row address-row">
+
+                <b>
+                    Address (Present):
+                </b>
+
+                <span>
+                    CHITAURI BABURI CHANDAULI<br>
+                    CHANDAULI CHANDAULI<br>
+                    Uttar Pradesh India 232102
+                </span>
+
+            </div>
+
+
+            <div class="row address-row">
+
+                <b>
+                    Address (Permanent):
+                </b>
+
+                <span>
+                    CHITAURI BABURI CHANDAULI<br>
+                    CHANDAULI CHANDAULI<br>
+                    Uttar Pradesh India 232102
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- YOUR QR CODE -->
+
+        <div class="qr-box">
+
+            <img
+                src="ASSET/QR.png"
+                alt="QR Code"
+            >
+
+        </div>
+
+
+    </div>
+
+
+    <!-- RULES -->
+
+    <div class="rules">
+
+        <p>
+            1. This ID is a property of GCET to whom it must be returned if found.
+        </p>
+
+        <p>
+            2. This card must be carefully preserved.
+            If lost, it will be replaced on payment of Rs.500.
+        </p>
+
+        <p>
+            3. This card must be worn all time within the campus.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- PRINT BUTTON -->
+
+<button
+    class="print-button"
+    onclick="printIDCard()">
+
+    Print ID Card
+
+</button>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    function printIDCard() {
+
+        window.print();
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
